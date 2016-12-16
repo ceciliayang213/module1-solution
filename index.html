@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='LunchCheck'>
+<head>
+<meta charset="utf-8">
+<title>Week1 Assignment</title>
+<script src='angular.min.js'></script>
+<script src='app.js'></script>
+<style>
+.color-red{
+  color:red;
+}
+.color-green{
+  color:green;
+}
+.border-red{
+  border:2px dashed red;
+  border-radius: 8px;
+}
+.border-green{
+  border:2px dashed green;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+<div ng-controller='LunchCheckController'>
+  <input type='text' ng-model='items' ng-class="{'border-red':msg === 'Please enter data first.','border-green':msg === 'Enjoy!' || msg === 'Too much!'}">
+  <br><br>
+  <button ng-click='countItems()'>Click to count items</button>
+  <br><br>
+  Message to display: <span ng-class="{'color-red':msg === 'Please enter data first.','color-green':msg === 'Enjoy!' || msg === 'Too much!'}">{{msg}}</span>
+  <br>
+</div>
+</body>
+</html>
