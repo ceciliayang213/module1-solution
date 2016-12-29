@@ -2,7 +2,7 @@
   'use strict';
   angular.module('LunchCheck',[])
   .controller('LunchCheckController',AppController);
-  AppController.$inject('$scope');
+  AppController.$inject=['$scope'];
   function AppController($scope){
     $scope.items = '';
     $scope.countItems = function(){
